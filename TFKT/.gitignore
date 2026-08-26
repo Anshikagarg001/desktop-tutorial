@@ -1,0 +1,22 @@
+# Terraform
+**/.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform plans
+tfplan
+*.tfplan
+plan-output.txt
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Keep Terraform lock files
+!.terraform.lock.hcl
