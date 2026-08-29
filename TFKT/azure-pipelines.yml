@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  terraformWorkingDirectory: 'Day1'
+  terraformWorkingDirectory: 'TFKT/Day1'
 
 steps:
 
