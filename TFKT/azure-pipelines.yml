@@ -46,3 +46,13 @@ steps:
     inlineScript: |
       cd $(terraformWorkingDirectory)
       terraform plan
+
+- task: AzureCLI@2
+  displayName: 'Terraform Apply'
+  inputs:
+    azureSubscription: 'terraform-azure-connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      cd $(terraformWorkingDirectory)
+      terraform apply -auto-approve
