@@ -18,7 +18,32 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
+  subscription_id = var.SUBSCRIPTION_ID
+  client_id = var.CLIENT_ID
+  client_secret = var.CLIENT_SECRET
+  tenant_id = var.TENANT_ID
 }
+
+variable "SUBSCRIPTION_ID" {
+  type = string
+  sensitive = true
+}
+
+variable "CLIENT_ID" {
+  type = string
+  sensitive = true
+}
+
+variable "TENANT_ID" {
+  type = string
+  sensitive = true
+}
+
+variable "CLIENT_SECRET" {
+  type = string
+  sensitive = true
+}
+
 
 locals {
   common_tags = {
