@@ -7,6 +7,14 @@ terraform {
   }
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "rg01"
+    storage_account_name = "tfkt1"
+    container_name       = "tfstate"
+    key                  = "day1.tfstate"
+  }
+}
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
